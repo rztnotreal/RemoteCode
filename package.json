@@ -1,0 +1,44 @@
+{
+  "name": "remotecode",
+  "version": "1.0.0",
+  "description": "Telegram-интерфейс для удалённого управления локальным OpenCode CLI",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:integration": "vitest run -c vitest.integration.config.ts"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "opencode",
+    "cli",
+    "remote"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^12.11.1",
+    "dotenv": "^18.0.9",
+    "drizzle-orm": "^0.45.4",
+    "grammy": "^1.46.0",
+    "node-pty": "^1.1.0",
+    "pino": "^10.4.0",
+    "pino-pretty": "^13.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
